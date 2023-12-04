@@ -7,7 +7,7 @@ def main():
 
         numSum = 0
         cards = [1 for _ in text]
-        print(cards)
+        
 
         for index, line in enumerate(text):
 
@@ -17,7 +17,6 @@ def main():
             win_nums, your_nums = win_nums.split(), your_nums.split()
 
             winning_numbers = len((set(win_nums) & set(your_nums)))
-            print(winning_numbers)
 
             if winning_numbers > 0:
                 numSum += 1 * 2**(winning_numbers-1)
@@ -25,11 +24,8 @@ def main():
 
             for i in range(winning_numbers):
                 cards[index + i + 1] += cards[index]
-                print(cards)
 
         print(numSum, sum(cards))
-
-
 
 
 
